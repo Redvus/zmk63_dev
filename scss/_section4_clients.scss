@@ -1,0 +1,67 @@
+/*! @group Section Clients */
+/* ========================================================================== */
+#section4 {
+	@extend %section;
+}
+
+.clients-block {
+	//height: 2000px;
+	//margin-top: 140px;
+	//padding: 50px 0 0 80px;
+	@include grid-column(12);
+	padding-top: 30px;
+	//visibility: hidden;
+
+	.client-logo {
+		@include grid-column(2);
+		// @include omega(6n);
+		padding: 10px;
+		margin-bottom: 0;
+		text-align: center;
+		visibility: hidden;
+
+		a {
+			//width: 20%;
+			display: inline-block;
+
+			img {
+				width: 100%;
+				height: auto;
+				transition: 0.3s;
+				filter: grayscale(100%);
+				opacity: 0.8;
+
+				&:hover {
+					transform: scale(0.95);
+					filter: grayscale(0);
+					opacity: 1;
+				}
+			}
+		}
+
+		&:nth-child(2n-1) {
+			animation-delay: 0.3s;
+		}
+
+		&:nth-child(2n) {
+			animation-delay: 0.5s;
+		}
+
+
+		@include grid-media($Medium) {
+			@include grid-column(4);
+			// @include omega(3n);
+		}
+
+		@include grid-media($XSmall) {
+			@include grid-column(4);
+			// @include omega(3n);
+		}
+
+		@include grid-media($Small) {
+			@include grid-column(3);
+			// @include omega(4n);
+		}
+	}
+}
+/* @end  */

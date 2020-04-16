@@ -1,0 +1,189 @@
+.cd-section {
+	.header-title {
+		h2 {
+			@include grid-media($Medium) {
+				visibility: visible;
+			}
+
+			@include grid-media($XSmall) {
+				visibility: visible;
+			}
+
+			@include grid-media($Small) {
+				visibility: visible;
+			}
+		}
+
+		h3 {
+			@include grid-media($Medium) {
+				visibility: visible;
+			}
+
+			@include grid-media($XSmall) {
+				visibility: visible;
+			}
+
+			@include grid-media($Small) {
+				visibility: visible;
+			}
+		}
+	}
+}
+
+.magazine {
+	.number-preview {
+		@include grid-media($Medium) {
+			visibility: visible;
+		}
+
+		@include grid-media($XSmall) {
+			visibility: visible;
+		}
+
+		@include grid-media($Small) {
+			visibility: visible;
+		}
+	}
+
+	.left-text {
+		p {
+			@include grid-media($Medium) {
+				visibility: visible;
+			}
+
+			@include grid-media($XSmall) {
+				visibility: visible;
+			}
+
+			@include grid-media($Small) {
+				visibility: visible;
+			}
+		}
+
+		ul {
+			@include grid-media($Medium) {
+				visibility: visible;
+			}
+
+			@include grid-media($XSmall) {
+				visibility: visible;
+			}
+
+			@include grid-media($Small) {
+				visibility: visible;
+			}
+		}
+	}
+}
+
+.info-section {
+	.info-content {
+		.tabs-block {
+			@include grid-media($Medium) {
+				visibility: visible;
+			}
+
+			@include grid-media($XSmall) {
+				visibility: visible;
+			}
+
+			@include grid-media($Small) {
+				visibility: visible;
+			}
+		}
+
+		.right-column {
+			.tab-content {
+				@include grid-media($Medium) {
+					visibility: visible;
+				}
+
+				@include grid-media($XSmall) {
+					visibility: visible;
+				}
+
+				@include grid-media($Small) {
+					visibility: visible;
+				}
+			}
+		}
+	}
+}
+
+.ms-staff-carousel {
+	.ms-view {
+		@include grid-media($Medium) {
+			visibility: visible;
+		}
+
+		@include grid-media($XSmall) {
+			visibility: visible;
+		}
+
+		@include grid-media($Small) {
+			visibility: visible;
+		}
+	}
+}
+
+.clients-block {
+	.client-logo {
+		@include grid-media($Medium) {
+			visibility: visible;
+		}
+
+		@include grid-media($XSmall) {
+			visibility: visible;
+		}
+
+		@include grid-media($Small) {
+			visibility: visible;
+		}
+	}
+}
+
+#section5 {
+	.right-column {
+		@include grid-media($Medium) {
+			visibility: visible;
+		}
+
+		@include grid-media($XSmall) {
+			visibility: visible;
+		}
+
+		@include grid-media($Small) {
+			visibility: visible;
+		}
+	}
+}
+
+#section7 {
+	.right-column {
+		@include grid-media($Medium) {
+			visibility: visible;
+		}
+
+		@include grid-media($XSmall) {
+			visibility: visible;
+		}
+
+		@include grid-media($Small) {
+			visibility: visible;
+		}
+	}
+
+	.form-contact {
+		@include grid-media($Medium) {
+			visibility: visible;
+		}
+
+		@include grid-media($XSmall) {
+			visibility: visible;
+		}
+
+		@include grid-media($Small) {
+			visibility: visible;
+		}
+	}
+}

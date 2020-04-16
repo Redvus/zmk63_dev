@@ -1,0 +1,129 @@
+/*! @group Section Info */
+/* ========================================================================== */
+//Инфо
+#section1 {
+	@extend %section;
+	height: 50vh;
+	// background-color: $primary;
+
+	h2 {
+
+	}
+
+	h3 {
+
+	}
+}
+
+.info-section {
+	width: 90%;
+	margin: 0 auto;
+}
+
+.info-content {
+	width: 75rem;
+	margin: 0 auto;
+
+	.tabs-block {
+		@include grid-column(4);
+		visibility: hidden;
+
+		.tabs-nav {
+			padding-left: 0;
+			padding-top: 35px;
+			//margin-right: -15px;
+			width: 100%;
+			right: 0;
+			float: right;
+
+
+			> li {
+				float: none;
+				font: {
+					family: $font-family-header;
+					size: $font-size-large - 2;
+					weight: normal;
+				}
+				text-transform: uppercase;
+				text-align: right;
+				margin: 0 0 15px 15px;
+				list-style: none;
+				border: 2px solid lighten($primary, 25%);
+				background-color: lighten($primary, 25%);
+				@include border-left-radius(30px);
+				transition: 0.25s;
+
+				a {
+					color: $primary;
+					display: block;
+					min-height: 20px;
+					padding: 20px 15px 16px;
+					text-decoration: none;
+					transition: 0.25s;
+				}
+
+				&:hover {
+					background-color: lighten($primary, 20%);
+					border-color: lighten($primary, 20%);
+				}
+			}
+
+			li.active {
+				margin-right: -3px;
+				border: $border_2px;
+				border-right-color: #fff;
+				background-color: #fff;
+
+				a {
+					font: {
+						family: $font-family-header-bold;
+					}
+					color: $primary;
+					padding-right: 0;
+				}
+			}
+		}
+	}
+
+	.right-column {
+		@include grid-column(8);
+
+		.tab-content {
+			visibility: hidden;
+			min-height: 400px;
+
+			font: {
+					family: $font-family-base;
+					size: $font-size-base;
+				};
+				line-height: $line-height-base;
+				text-align: left;
+
+			@include grid-media($Large) {
+				padding-right: 2rem;
+			}
+
+			@include grid-media($Medium) {
+				padding-right: 2rem;
+			}
+
+			@include grid-media($XSmall) {
+				padding-right: 1rem;
+			}
+
+			@include grid-media($Small) {
+				padding-right: 1rem;
+			}
+		}
+
+		.tab-pane {
+			display: none;
+			animation: 1s fadeIn;
+
+			&.active {
+				display: block;
+			}
+		}
+	}
+}
+/* @end  */

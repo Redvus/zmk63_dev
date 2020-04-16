@@ -1,0 +1,41 @@
+/*! @group Fonts */
+/* ========================================================================== */
+@font-face {
+  font-family: 'Uni Sans Thin CAPS';
+  src: url('fonts/Uni_Sans_Thin.eot'); /* IE9 Compat Modes */
+  src: url('fonts/Uni_Sans_Thin.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/Uni_Sans_Thin.woff') format('woff'), /* Modern Browsers */
+       url('fonts/Uni_Sans_Thin.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('fonts/Uni_Sans_Thin.svg#1bd43dde46dc066a93356782823de17e') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  200;
+}
+
+@font-face {
+  font-family: 'Uni Sans Heavy CAPS';
+  src: url('fonts/Uni_Sans_Heavy.eot'); /* IE9 Compat Modes */
+  src: url('fonts/Uni_Sans_Heavy.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/Uni_Sans_Heavy.woff') format('woff'), /* Modern Browsers */
+       url('fonts/Uni_Sans_Heavy.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('fonts/Uni_Sans_Heavy.svg#baac65bb1c1f97c88c153c7365f11a3e') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  400;
+}
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('fonts/fontawesome-webfont.eot?v=4.2.0');
+  src: url('fonts/fontawesome-webfont.eot?#iefix&v=4.2.0') format('embedded-opentype'),
+		url('fonts/fontawesome-webfont.woff?v=4.2.0') format('woff'),
+		url('fonts/fontawesome-webfont.ttf?v=4.2.0') format('truetype'),
+		url('fonts/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* @end  */
+
+
+
+

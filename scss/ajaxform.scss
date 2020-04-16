@@ -1,0 +1,34 @@
+/* @group Ajax form */
+/* ========================================================================== */
+@import url('../assets/components/ajaxform/css/lib/jquery.jgrowl.min.css');
+
+.ajax_form {
+	font-family: 'Trebuchet MS';
+	
+	.error {
+		width: 100%;
+		text-align: center;
+	}
+	
+	span.error {
+		width: 100%;
+		display: block;
+		color: #d9534f;
+		margin-top: -5px;
+		margin-bottom: 10px;
+		font-size: 12px;
+	}
+}
+
+.af-message-success {
+	background-color: #5cb85c !important;
+}
+
+.af-message-error {
+	background-color: #d9534f !important;
+}
+
+.af-message-info {
+	background-color: #5bc0de !important;
+}
+/* $end  */

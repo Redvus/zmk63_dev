@@ -1,0 +1,31 @@
+/*! @group Команда */
+/* ========================================================================== */
+//Команда
+#section3 {
+	@extend %section;
+	background-color: $primary;
+
+	.center-column {
+		border-color: #fff;
+	}
+
+	.team-block {
+		height: 500px;
+	}
+
+	h2, h3, h4, p {
+		color: #fff;
+	}
+}
+
+.team-block {
+	width: 60rem;
+	margin: 0 auto;
+	// @include shift(1);
+	//visibility: hidden;
+	// width: 80%;
+	// display: block;
+	// left: 50%;
+	// transform: translateX(-50%);
+}
+/* @end  */

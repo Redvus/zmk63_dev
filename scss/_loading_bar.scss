@@ -1,0 +1,38 @@
+/*! @group Loading Bar */
+/* ========================================================================== */
+#cd-loading-bar {
+	position: fixed;
+	z-index: 2;
+	right: 90px;
+	width: 4px;
+	visibility: hidden;
+	/* Force Hardware Acceleration */
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	@include translate3d(0, 0, 0);
+}
+
+#cd-loading-bar.index {
+	background-color: $primary;
+}
+
+#cd-loading-bar.team {
+	background-color: $secondary;
+}
+
+#cd-loading-bar.franchise {
+	background-color: $third;
+}
+
+#cd-loading-bar.clients {
+	background-color: #d35657;
+}
+
+#cd-loading-bar.contact {
+	background-color: #e4b162;
+}
+
+#cd-loading-bar.loading {
+	visibility: visible;
+}
+/* @end  */

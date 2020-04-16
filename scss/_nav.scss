@@ -1,0 +1,88 @@
+/*! @group Fullpage navigation + Ferdinand */
+/* ========================================================================== */
+nav {
+	width: 65%;
+	height: 100%;
+	display: block;
+	float: left;
+	line-height: 1;
+	margin: 0 auto;
+	z-index: 1000;
+
+	ul {
+		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+		margin-right: 30px;
+		padding: 0;
+		list-style: none;
+		float: right;
+	}
+
+	li {
+		display: block;
+		margin: 10px 0 0;
+
+		a {
+			font: {
+				family: $font-family-header;
+				size: $font-size-base;
+				weight: normal;
+			};
+			color: $third;
+			display: block;
+			cursor: pointer;
+			user-select: none;
+			position: relative;
+			margin: 0 0.5em;
+			padding: 0.83em 0;
+			text-align: right;
+			color: $third;
+			transition: color 0.3s;
+			-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+			&:hover,
+			&:focus {
+				outline: none;
+				color: darken($primary, 30%);
+			}
+
+			&:before {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: 6px;
+				background: $primary;
+				transform: scale3d(0, 1, 1);
+				transition: transform 0.1s;
+			}
+		}
+
+		&.active {
+			color: darken($primary, 30%);
+
+			a {
+				&:before {
+					transform: scale3d(1, 1, 1);
+					transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+					transition-duration: 0.3s;
+				}
+			}
+		}
+	}
+
+	@include grid-media($Medium) {
+		display: none;
+	}
+
+	@include grid-media($XSmall) {
+		display: none;
+	}
+
+	@include grid-media($Small) {
+		display: none;
+	}
+}
+/* @end  */

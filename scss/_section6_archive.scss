@@ -1,0 +1,120 @@
+/*! @group Архив журналов */
+/* ========================================================================== */
+#section6 {
+	@extend %section;
+	min-height: 400px;
+	background-color: $primary;
+	// padding-top: 5rem;
+	// padding-bottom: 3rem;
+
+	h2, h3, p {
+		color: #fff;
+	}
+
+	// @include grid-media($Medium-height) {
+	// 	padding: 5rem 0 3em;
+	// }
+
+	@include grid-media($Medium) {
+		padding: 5rem 0 3em;
+	}
+
+	@include grid-media($XSmall) {
+		padding: 5rem 0 3em;
+	}
+
+	@include grid-media($Small) {
+		padding: 5rem 0 3em;
+	}
+}
+
+.archive-header {
+	border-color: #fff;
+}
+
+.archive-block {
+	width: 60rem;
+	margin: 0 auto;
+
+	.archive-slider {
+		height: 400px;
+	}
+
+	.ms-staff-carousel {
+		.ms-nav-prev {
+			left: -100px;
+		}
+
+		.ms-nav-next {
+		    left:auto;
+		    right: -110px
+		}
+
+		.ms-staff-info {
+
+			a {
+				font: {
+					family: $font-family-header-bold;
+					size: $font-size-base;
+				};
+				color: #fff;
+				line-height: 3rem;
+				display: inline-block;
+				padding: 0.2rem 2rem 0;
+				margin-top: 1rem;
+				text-decoration: none;
+				border: $border_2px;
+				border-color: #fff;
+				@include border-radius(3rem);
+				transition: 0.25s;
+
+				&:hover {
+					color: $secondary;
+					border-color: $secondary;
+				}
+			}
+		}
+	}
+
+	.archive-number {
+		@include grid-column(3);
+		// @include omega(4n);
+		min-height: 100px;
+		margin-bottom: 1.5rem;
+		text-align: center;
+
+		a {
+			display: block;
+
+			img {
+				width: 100%;
+				height: auto;
+				transition: 0.3s;
+				filter: saturate(50%);
+				opacity: 0.8;
+
+				&:hover {
+					//transform: scale(0.95);
+					filter: saturate(100%);
+					opacity: 1;
+				}
+			}
+		}
+
+		// @include grid-media($Medium) {
+		// 	@include grid-column(4);
+			// @include omega(3n);
+		// }
+		//
+		// @include grid-media($XSmall) {
+		// 	@include grid-column(4);
+			// @include omega(3n);
+		// }
+		//
+		// @include grid-media($Small) {
+		// 	@include grid-column(3);
+			// @include omega(4n);
+		// }
+	}
+}
+/* @end  */
