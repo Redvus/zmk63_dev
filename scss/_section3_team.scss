@@ -27,5 +27,10 @@
 	// display: block;
 	// left: 50%;
 	// transform: translateX(-50%);
+
+	@include grid-media($Small) {
+		width: 100%;
+		padding: 0 1rem;
+	}
 }
 /* @end  */

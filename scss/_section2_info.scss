@@ -6,12 +6,9 @@
 	height: 50vh;
 	// background-color: $primary;
 
-	h2 {
-
-	}
-
-	h3 {
-
+	@include grid-media($Small) {
+		height: inherit;
+		min-height: 100vh;
 	}
 }
 
@@ -124,6 +121,11 @@
 				display: block;
 			}
 		}
+	}
+
+	@include grid-media($Small) {
+		display: none;
+		visibility: hidden;
 	}
 }
 /* @end  */

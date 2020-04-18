@@ -27,19 +27,8 @@
 		}
 	}
 
-	@include grid-media($Medium) {
-		@include grid-column(10);
-		// @include shift(1);
-	}
-
-	@include grid-media($XSmall) {
-		@include grid-column(8);
-		// @include shift(2);
-	}
-
 	@include grid-media($Small) {
-		@include grid-column(10);
-		// @include shift(1);
+		width: 100%;
 	}
 }
 
@@ -119,12 +108,12 @@
 /*! @group Content */
 /* ========================================================================== */
 %section {
-	//min-height: 100vh;
-	//padding: 4em 0;
-	//display: flex;
-	//flex-direction: column;
-	//justify-content: center;
-	//align-items: flex-start;
+	min-height: 100vh;
+	// padding: 4em 0;
+	// display: flex;
+	// flex-direction: column;
+	// justify-content: center;
+	// align-items: flex-start;
 
 /*
 	@include grid-media($mobile) {
@@ -135,18 +124,6 @@
 	// @include grid-media($Large) {
 	// 	padding: 2rem 0;
 	// }
-
-	@include grid-media($Medium) {
-		padding: 2rem 0;
-	}
-
-	@include grid-media($XSmall) {
-		padding: 2rem 0;
-	}
-
-	@include grid-media($Small) {
-		padding: 2rem 0;
-	}
 }
 
 .cd-section {
@@ -155,6 +132,83 @@
 	width: 100%;
 	float: left;
 	background: #fff;
+
+	&__accordion {
+		width: 100%;
+		// min-height: 100vh;
+		// margin: 0 1rem;
+		display: none;
+		visibility: hidden;
+		overflow: hidden;
+		position: relative;
+		padding: 0;
+		// background-color: $wrapperBackground;
+
+		.panel {
+			display: block;
+			position: relative;
+			overflow: hidden;
+			// margin: 0 0 ($headerHeight / 4);
+
+			&-header {
+				height: $headerHeight + 1;
+				display: flex;
+				align-items: center;
+				line-height: 1.2;
+				padding: ($headerHeight / 4) $headerHeight ($headerHeight / 4) ($headerHeight / 4);
+				cursor: pointer;
+				background-color: $primary;
+
+				h3 {
+					font-family: $font-family-header-bold;
+					font-size: $font-size-h4;
+					color: $five;
+				}
+
+				i {
+					color: $five;
+					font-size: $font-size-h3;
+				}
+			}
+
+			&-content {
+				position: relative;
+				height: 0;
+				padding: ($headerHeight / 8) ($headerHeight / 4) ($headerHeight / 4);
+
+				p {
+					margin: 1rem 0;
+				}
+
+				ul {
+					margin: 1rem 0;
+				}
+			}
+
+			span i {
+				padding-right: 0;
+			}
+		}
+
+		.arrow {
+			position: absolute;
+			right: 2rem;
+			font-weight: bold;
+			transform: translateX(50%);
+		}
+	}
+
+	@include grid-media($Small) {
+		height: inherit;
+		min-height: 100vh;
+		position: relative;
+		padding: ($headerHeight + 1) 0;
+
+		&__accordion {
+			display: block;
+			visibility: visible;
+		}
+	}
 }
 
 .header-title {
@@ -191,6 +245,19 @@
 			family: $font-family-header-bold;
 		};
 		animation-delay: 0.1s;
+	}
+
+	@include grid-media($Small) {
+
+
+		h2, h3 {
+			font-size: calc(1rem + 2.5vmax);
+			visibility: visible;
+
+			span {
+				font-size: calc(1rem + 2.5vmax);
+			}
+		}
 	}
 }
 

@@ -28,6 +28,25 @@
 	.cd-scroll-down {
 		top: 105vh;
 	}
+
+	@include grid-media($Small) {
+
+		.container {
+			width: 100%;
+			padding: 0 1rem;
+		}
+
+		.left-text {
+			width: 100%;
+		}
+
+		.form-contact {
+			width: 100%;
+			padding-left: 0;
+			margin-top: 1rem;
+			visibility: visible;
+		}
+	}
 }
 
 .certification-block {

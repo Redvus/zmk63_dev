@@ -46,21 +46,23 @@
 		&:nth-child(2n) {
 			animation-delay: 0.5s;
 		}
+	}
 
+	@include grid-media($Small) {
+		width: 100%;
+		padding: 0 1rem;
+		margin: 2rem 0 0;
 
-		@include grid-media($Medium) {
-			@include grid-column(4);
-			// @include omega(3n);
-		}
+		.client-logo {
+			@include grid-column(6);
+			visibility: visible;
 
-		@include grid-media($XSmall) {
-			@include grid-column(4);
-			// @include omega(3n);
-		}
+			a {
 
-		@include grid-media($Small) {
-			@include grid-column(3);
-			// @include omega(4n);
+				img {
+					filter: grayscale(0);
+				}
+			}
 		}
 	}
 }

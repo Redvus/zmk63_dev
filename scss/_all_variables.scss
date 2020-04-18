@@ -1,10 +1,10 @@
 /*! @group Custom colors */
 /* ========================================================================== */
-$primary:		#88ccc8 !default;
-$secondary:		#a74a83 !default;
-$third:			#596176 !default;
-$fourth:		#75788b !default;
-$five:      #fff;
+$primary  : #88ccc8 !default;
+$secondary: #a74a83 !default;
+$third    : #596176 !default;
+$fourth   : #75788b !default;
+$five     : #fff;
 /* @end  */
 
 $border_2px: 2px solid $primary;
@@ -23,17 +23,19 @@ $pad_g  : 1140px;
 $pad_v  : 960px;
 $mobile : 570px;
 
-$XXLarge: (media: "(min-width: #{$imac21})");
-$XLarge: (media: "(min-width: #{$cinema}) and (max-width: #{$imac21})");
-$Large: (media: "(min-width: #{$pad_g}) and (max-width: #{$cinema})");
-$Medium: (media: "(min-width: #{$pad_v}) and (max-width: #{$pad_g})");
-$XSmall: (media: "(max-width: #{$pad_v})");
-$Small: (media: "(max-width: #{$mobile})");
-$HSmall: (media: "(max-height: #{$mobile})");
+$XXLarge  : (media: "(min-width: #{$imac21})");
+$XLarge   : (media: "(min-width: #{$cinema}) and (max-width: #{$imac21})");
+$Large    : (media: "(min-width: #{$pad_g}) and (max-width: #{$cinema})");
+$Medium   : (media: "(min-width: #{$pad_v}) and (max-width: #{$pad_g})");
+$XSmall   : (media: "(max-width: #{$pad_v})");
+$Small    : (media: "(max-width: #{$mobile})");
+$HSmall   : (media: "(max-height: #{$mobile})");
 $Landscape: (media: "(max-width: #{$pad_v}) and (orientation: landscape)");
 $XPortrait: (media: "(min-width: #{$pad_v}) and (max-width: #{$pad_g}) and (orientation: portrait)");
 
 /*=====  End of Media  ======*/
+
+$headerHeight: 4rem;
 
 //Навигация и иконки
 $nav-arrows: url('images/nav_arrows.png');
@@ -199,8 +201,34 @@ $line-height-base:        1.4 !default; // 20/14
 $line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~20px
 
 body {
-  color: $third;
-  font-family: $font-family-base;
+	color: $third;
+	font-family: $font-family-base;
+
+	p {
+		font-size: $font-size-base;
+	}
+
+	ul {
+		font-family: $font-family-base;
+		line-height: $line-height-base;
+	}
+
+	@include grid-media($Small) {
+
+		p {
+			font-size: $font-size-large;
+		}
+
+		ul {
+			font-size: $font-size-large;
+			list-style: disc;
+			padding-left: $font-size-large;
+		}
+
+		h1,h2,h3,h4 {
+			font-family: $font-family-header-bold !important;
+		}
+	}
 }
 
 a {

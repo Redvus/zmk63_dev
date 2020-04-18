@@ -166,18 +166,18 @@
 	=                   Master slider (Команда)                   =
 	=============================================================*/
 
-	var slider = new MasterSlider();
+	const slider = new MasterSlider();
 	if($(window).width() <= 1024 || screen.width <= 1024) {
 		slider.setup('masterslider' , {
 			loop:true,
-			width:200,
-			height:200,
+			width:216,
+			height:216,
 			layout:'boxed',
 			speed:20,
-			view:'fade',
+			view:'mask',
 			preload:0,
 			space:0,
-			viewOptions:{centerSpace:3}
+			viewOptions:{centerSpace:1}
 		});
 	} else {
 		slider.setup('masterslider' , {
@@ -206,7 +206,7 @@
 	=                   Master slider (Archive)                   =
 	=============================================================*/
 
-	var slider1 = new MasterSlider();
+	const slider1 = new MasterSlider();
 	if($(window).width() <= 1024 || screen.width <= 1024) {
 		slider1.setup('masterslider1' , {
 			loop:true,
@@ -214,7 +214,7 @@
 			height: 400,
 			layout: 'boxed',
 			speed: 20,
-			view: 'fade',
+			view: 'mask',
 			preload: 0,
 			space: 0,
 			viewOptions:{centerSpace:4}

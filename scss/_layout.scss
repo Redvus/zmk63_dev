@@ -1,17 +1,20 @@
 /*! @group Header */
 /* ========================================================================== */
-.header-top {
-	width: 100%;
-	height: 58px;
-	border-bottom: 5px solid $primary;
-	top: 0;
-	position: fixed;
-	background-color: #fff;
-	z-index: 9000;
-	transition: 0.5s;
-	//visibility: hidden;
+.header {
 
-	.header-logo {
+	&-top {
+		width: 100%;
+		height: 58px;
+		border-bottom: 5px solid $primary;
+		top: 0;
+		position: fixed;
+		background-color: #fff;
+		z-index: 9000;
+		transition: 0.5s;
+		//visibility: hidden;
+	}
+
+	&-logo {
 		width: 35%;
 		height: calc(100% - 10px);
 		display: block;
@@ -25,58 +28,59 @@
 			height: 35px;
 			max-height: 35px;
 		}
-
-		@include grid-media($Medium) {
-			@include grid-column(12);
-		}
-
-		@include grid-media($XSmall) {
-			@include grid-column(8);
-		}
-
-		@include grid-media($Small) {
-			@include grid-column(8);
-		}
 	}
-}
 
-.header-bottom {
-	width: 100%;
-	height: 58px;
-	border-top: 5px solid $primary;
-	bottom: 0;
-	position: fixed;
-	background-color: #fff;
-	//text-align: center;
-	z-index: 9000;
-	transition: 0.5s;
+	&-bottom {
+		width: 100%;
+		height: 58px;
+		border-top: 5px solid $primary;
+		bottom: 0;
+		position: fixed;
+		background-color: #fff;
+		//text-align: center;
+		z-index: 9000;
+		transition: 0.5s;
 
-	.header-slogan {
-		@include grid-column(9);
-		text-align: left;
-		padding-top: 16px;
-		padding-left: 30px;
+		.header-slogan {
+			@include grid-column(9);
+			text-align: left;
+			padding-top: 16px;
+			padding-left: 30px;
 
-		h2 {
-			font: {
-				family: $font-family-header;
-				size: $font-size-large;
-				weight: normal;
-			};
-			color: $third;
-		}
+			h2 {
+				font: {
+					family: $font-family-header;
+					size: $font-size-large;
+					weight: normal;
+				};
+				color: $third;
+			}
 
-		.slogan-hide {
+			.slogan-hide {
 
-			@include grid-media($Large) {
-				display: none;
+				@include grid-media($Large) {
+					display: none;
+				}
+
+				@include grid-media($Medium) {
+					display: none;
+				}
+
+				@include grid-media($XSmall) {
+					display: none;
+				}
+
+				@include grid-media($Small) {
+					display: none;
+				}
 			}
 
 			@include grid-media($Medium) {
-				display: none;
+				@include grid-column(8);
 			}
 
 			@include grid-media($XSmall) {
+				@include grid-column(8);
 				display: none;
 			}
 
@@ -85,178 +89,203 @@
 			}
 		}
 
-		@include grid-media($Medium) {
-			@include grid-column(8);
-		}
-
-		@include grid-media($XSmall) {
-			@include grid-column(8);
-			display: none;
-		}
-
-		@include grid-media($Small) {
-			display: none;
-		}
-	}
-
-	.header-phone {
-		@include grid-column(3);
-		margin-top: 15px;
-		display: block;
-		text-align: right;
-		padding-right: 30px;
-		transition: 0.5s;
-		//@include transition-delay(1s);
-
-		h2 {
-			font: {
-				family: $font-family-header-bold;
-				size: $font-size-large;
-			};
-			color: $secondary;
-		}
-
-		@include grid-media($Medium) {
-			@include grid-column(4);
-		}
-
-		@include grid-media($XSmall) {
-			@include grid-column(8);
-			text-align: center;
-		}
-
-		@include grid-media($Small) {
-			@include grid-column(8);
-			text-align: center;
-		}
-	}
-
-	.header-social {
-		width: auto;
-		height: 30px;
-		margin-top: 10px;
-		margin-right: 30px;
-		float: right;
-		//right: 60px;
-		//position: absolute;
-		//top: 28px;
-		transition: 0.5s;
-
-		.social-vk {
-			width: 30px;
-			height: 30px;
-			display: inline-block;
-			margin-right: 10px;
-			background: url('images/social_icons.svg') 0 0 no-repeat;
-			background-size: cover;
-			border-radius: 50%;
-			transition: 0.5s;
-
-			&:hover {
-				fill: darken($primary, 10%);
-			}
-		}
-
-		.social-facebook {
-			width: 30px;
-			height: 30px;
-			display: inline-block;
-			background: url('images/social_icons.svg') -30px 0 no-repeat;
-			background-size: cover;
-			border-radius: 50%;
-			transition: 0.5s;
-		}
-	}
-
-	.number-download {
-		animation-duration: 0.3s;
-		//@include animation-delay(1s);
-
-		.number-link {
-			width: 100%;
-			height: 30px;
+		.header-phone {
+			@include grid-column(3);
+			margin-top: 15px;
 			display: block;
-			margin-top: 10px;
-			padding: 7px 10px 3px;
-			//top: 79.5vh;
-			//left: 48%;
-			//position: absolute;
-			z-index: 9000;
-			color: $primary;
-			font: {
-				family: $font-family-header-bold;
-				size: $font-size-base;
-			};
-			background: #fff;
-			border: 2px solid darken($primary, 10%);
-			@include border-top-radius(15px);
-			@include border-bottom-radius(15px);
+			text-align: right;
+			padding-right: 30px;
 			transition: 0.5s;
-			outline: none;
-			transform: translateZ(0);
+			//@include transition-delay(1s);
 
-/*
-		    &:before {
-				content: '\f019';
+			h2 {
 				font: {
-					family: 'FontAwesome';
-					size: $font-size-large + 5;
-					weight: normal;
+					family: $font-family-header-bold;
+					size: $font-size-large;
 				};
-				color: #fff;
-				position: absolute;
-				margin: -4px 0 0 7px;
-				opacity: 0;
-				@include scale(0.2);
-				@include transition(0.25s);
+				color: $secondary;
 			}
 
-			&:after {
-				content: '';
-				background-color: #fff;
-				top: 0;
-				right: 0;
-				bottom: 0;
-				left: 0;
-				position: absolute;
-				@include border-radius(100%);
-				@include scale(0);
-				transition: transform 0.2s, opacity 0.3s;
-				z-index: -1;
+			@include grid-media($Medium) {
+				@include grid-column(4);
 			}
-*/
 
-			&:hover {
-				color: #fff;
-				background-color: darken($primary, 10%);
-				//@include scale(1.05);
-				//@include drop-shadow($x: 0, $y: 0, $blur: 30px, $alpha: .3);
+			@include grid-media($XSmall) {
+				@include grid-column(8);
+				text-align: center;
+			}
 
-/*
+			@include grid-media($Small) {
+				@include grid-column(8);
+				text-align: center;
+			}
+		}
+
+		.header-social {
+			width: auto;
+			height: 30px;
+			margin-top: 10px;
+			margin-right: 30px;
+			float: right;
+			//right: 60px;
+			//position: absolute;
+			//top: 28px;
+			transition: 0.5s;
+
+			.social-vk {
+				width: 30px;
+				height: 30px;
+				display: inline-block;
+				margin-right: 10px;
+				background: url('images/social_icons.svg') 0 0 no-repeat;
+				background-size: cover;
+				border-radius: 50%;
+				transition: 0.5s;
+
+				&:hover {
+					fill: darken($primary, 10%);
+				}
+			}
+
+			.social-facebook {
+				width: 30px;
+				height: 30px;
+				display: inline-block;
+				background: url('images/social_icons.svg') -30px 0 no-repeat;
+				background-size: cover;
+				border-radius: 50%;
+				transition: 0.5s;
+			}
+		}
+
+		.number-download {
+			animation-duration: 0.3s;
+			//@include animation-delay(1s);
+
+			.number-link {
+				width: 100%;
+				height: 30px;
+				display: block;
+				margin-top: 10px;
+				padding: 7px 10px 3px;
+				//top: 79.5vh;
+				//left: 48%;
+				//position: absolute;
+				z-index: 9000;
+				color: $primary;
+				font: {
+					family: $font-family-header-bold;
+					size: $font-size-base;
+				};
+				background: #fff;
+				border: 2px solid darken($primary, 10%);
+				@include border-top-radius(15px);
+				@include border-bottom-radius(15px);
+				transition: 0.5s;
+				outline: none;
+				transform: translateZ(0);
+
+	/*
 				&:before {
-					opacity: 1;
-					@include scale(1);
+					content: '\f019';
+					font: {
+						family: 'FontAwesome';
+						size: $font-size-large + 5;
+						weight: normal;
+					};
+					color: #fff;
+					position: absolute;
+					margin: -4px 0 0 7px;
+					opacity: 0;
+					@include scale(0.2);
+					@include transition(0.25s);
 				}
 
 				&:after {
-					@include scale(1);
-					opacity: 0;
+					content: '';
+					background-color: #fff;
+					top: 0;
+					right: 0;
+					bottom: 0;
+					left: 0;
+					position: absolute;
+					@include border-radius(100%);
+					@include scale(0);
+					transition: transform 0.2s, opacity 0.3s;
+					z-index: -1;
 				}
-*/
-			}
+	*/
 
-			&:active {
-				//@include scale(0.95);
+				&:hover {
+					color: #fff;
+					background-color: darken($primary, 10%);
+					//@include scale(1.05);
+					//@include drop-shadow($x: 0, $y: 0, $blur: 30px, $alpha: .3);
 
-				&:before {
-					transform: scale(0.7);
+	/*
+					&:before {
+						opacity: 1;
+						@include scale(1);
+					}
+
+					&:after {
+						@include scale(1);
+						opacity: 0;
+					}
+	*/
 				}
+
+				&:active {
+					//@include scale(0.95);
+
+					&:before {
+						transform: scale(0.7);
+					}
+				}
+
 			}
 
 		}
+	}
 
+	@include grid-media($Small) {
+		height: $headerHeight;
+
+		&-logo {
+			width: 100%;
+			height: 100%;
+			margin-top: 0;
+
+			img {
+				width: auto;
+				height: 100%;
+				display: block;
+				object-fit: cover;
+				object-position: center;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+		}
+
+		&-bottom {
+
+			.header-phone{
+				width: 100%;
+				margin: 0;
+				padding: 0;
+				position: absolute;
+				text-align: center;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+		}
 	}
 }
+
+
 /* @end  */
 
 /*! @group Footer */
@@ -405,6 +434,43 @@ footer {
 			}
 		}
 	}
+
+	@include grid-media($Small) {
+
+		.footer-container {
+			width: 100%;
+			padding: 0 1rem;
+			flex-direction: column;
+		}
+
+		.footer-adress {
+			width: 100%;
+
+			&__text {
+
+
+				p {
+					font: {
+						family: $font-family-base;
+					};
+				}
+			}
+		}
+
+		.footer-info {
+			width: 100%;
+			margin-top: 1rem;
+
+			.counters-block {
+				flex-direction: row;
+
+				.counters {
+					display: none;
+					visibility: hidden;
+				}
+			}
+		}
+	}
 }
 /* @end  */
 
@@ -424,7 +490,7 @@ footer {
 		margin: 0 auto;
 
 		&__breadcrumbs {
-			height: 1rem;
+			min-height: 1rem;
 			margin-bottom: 2rem;
 
 			li {
@@ -449,6 +515,19 @@ footer {
 					font-family: $font-family-base;
 					color: $primary;
 				}
+			}
+		}
+	}
+
+	@include grid-media($Small) {
+		padding: ($headerHeight + 1) 0;
+
+		&-content {
+			width: 100%;
+			padding: 0 1rem;
+
+			&__breadcrumbs {
+				padding-left: 0;
 			}
 		}
 	}
