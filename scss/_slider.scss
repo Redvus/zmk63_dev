@@ -27,10 +27,11 @@
 	    width: 43px;
 	    height: 103px;
 	    left: -50px;
-	    margin-top: -44px;
+	    // margin-top: -44px;
 	    position: absolute;
 	    top: 50%;
-	    cursor: pointer;
+		cursor: pointer;
+		transform: translateY(-50%);
 	}
 
 	.ms-nav-next {
@@ -41,10 +42,11 @@
 	    height: 103px;
 	    right: -63px;
 		left: auto;
-	    margin-top: -44px;
+	    // margin-top: -44px;
 	    position: absolute;
 	    top: 50%;
-	    cursor: pointer;
+		cursor: pointer;
+		transform: translateY(-50%);
 	}
 
 	.ms-staff-info {
@@ -155,11 +157,11 @@
 		}
 
 		.ms-nav-prev {
-			left: -53px !important;
+			left: -35px !important;
 		}
 
 		.ms-nav-next {
-			right: -63px !important;
+			right: -45px !important;
 		}
 
 		&.ms-round {

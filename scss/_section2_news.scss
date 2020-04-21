@@ -4,16 +4,19 @@
 	@extend %section;
 	min-height: 50vh;
 	background-color: $fourth;
-	// padding-top: 5rem;
-	// padding-bottom: 3rem;
+	padding: $headerHeight * 2 0;
 
 	.post-preview {
 		width: 100%;
 		min-height: 3rem;
 		display: block;
-		margin-bottom: 2rem;
+		margin-bottom: $headerHeight * 1.5;
 		color: $five;
 		position: relative;
+
+		&:first-child {
+			margin-top: $headerHeight / 2;
+		}
 
 		&__top {
 
@@ -116,6 +119,15 @@
 	}
 
 	@include grid-media($Small) {
+		padding: $headerHeight 0;
+
+		.post-preview {
+			margin-bottom: $headerHeight;
+
+			&:first-child {
+				margin-top: 0;
+			}
+		}
 
 		.news-content {
 			width: 100%;
@@ -129,7 +141,7 @@
 	width: 100%;
 	min-height: 3rem;
 	display: block;
-	margin-bottom: 4rem;
+	margin-bottom: $headerHeight * 1.5;
 	color: $third;
 	position: relative;
 
@@ -137,7 +149,7 @@
 		font-family: $font-family-header;
 		font-size: $font-size-h3;
 		margin-bottom: 1rem;
-		color: $primary;
+		color: $secondary;
 		transition: color 0.25s;
 	}
 
@@ -145,18 +157,18 @@
 		font-family: $font-family-base;
 	}
 
-	&__top {
+	// &__top {
 
-		a {
+	// 	a {
 
-			&:hover {
+	// 		&:hover {
 
-				h3 {
-					color: $secondary;
-				}
-			}
-		}
-	}
+	// 			h3 {
+	// 				color: $secondary;
+	// 			}
+	// 		}
+	// 	}
+	// }
 
 	&__date {
 		padding: 0.3rem 0.75rem;
@@ -220,6 +232,21 @@
 		}
 	}
 
+	&__middle {
+
+		p {
+
+			b {
+				font: {
+					family: $font-family-header-bold;
+					size: $font-size-base;
+				};
+				color: $primary;
+				margin-bottom: 0.5rem;
+			}
+		}
+	}
+
 	&__bottom {
 
 
@@ -266,6 +293,12 @@
 
 				> p {
 					margin: 1rem 0 0 !important;
+				}
+
+				> ul {
+					list-style: disc !important;
+					padding-left: $font-size-base !important;
+					margin-top: 1rem;
 				}
 			}
 		}
