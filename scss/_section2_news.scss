@@ -245,6 +245,15 @@
 				margin-bottom: 0.5rem;
 			}
 		}
+
+		h4 {
+			font: {
+				family: $font-family-header;
+				size: $font-size-h4;
+			};
+			color: $secondary;
+			margin-top: 2rem;
+		}
 	}
 
 	&__bottom {
@@ -289,6 +298,7 @@
 					font-family: $font-family-header-bold;
 					font-size: $font-size-h5;
 					color: $primary;
+					margin-top: 0;
 				}
 
 				> p {
