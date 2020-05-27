@@ -37,6 +37,44 @@ $XPortrait: (media: "(min-width: #{$pad_v}) and (max-width: #{$pad_g}) and (orie
 
 $headerHeight: 4rem;
 
+@mixin rowMachine($numPerRow, $margin) {
+    width: calc((100% - ((#{$numPerRow} - 1) * #{$margin})) / #{$numPerRow});
+    // width: calc((100% - ((#{$numPerRow} / #{$numPerRow}) * #{$margin})) / #{$numPerRow}); //решение для fenom
+    display: inline-block;
+    // float: left;
+
+    &:nth-child(n) {
+        margin-bottom: $margin;
+        margin-right: $margin;
+        // margin-left: -(($numPerRow - 1) * 0.1rem);
+    }
+
+    // &:first-child {
+    // 	margin-left: 0;
+    // }
+
+    &:nth-of-type(#{$numPerRow}n) {
+        margin-right: 0;
+        // margin-bottom: 0;
+    }
+
+    // &:nth-of-type(calc(#{$numPerRow} + 1)n) {
+    //     margin-left: 0;
+    // }
+
+    // @include grid-media($Medium) {
+    // 	&:nth-child(n) {
+    // 		margin-right: 0;
+    // 	}
+    // }
+
+    // @include grid-media($Small) {
+    // 	&:nth-child(n) {
+    // 		margin-right: -5px;
+    // 	}
+    // }
+}
+
 //Навигация и иконки
 $nav-arrows: url('images/nav_arrows.png');
 $nav-icons: url('images/nav_icons.png');
