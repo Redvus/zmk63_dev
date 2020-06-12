@@ -98,7 +98,7 @@
 			position: absolute;
 			right: 0;
 			// bottom: 0;
-			transform: translateY(100%);
+			transform: translateY(50%);
 			transition: color 0.25s;
 
 			&:hover {
@@ -163,7 +163,7 @@
 				margin-top: 0;
 			}
 
-			&:last-child {
+			&:nth-child(3n) {
 				margin-bottom: $headerHeight;
 			}
 
@@ -301,7 +301,7 @@
 				size: $font-size-h4;
 			};
 			color: $secondary;
-			margin-top: 2rem;
+			margin-top: 3rem;
 		}
 	}
 
