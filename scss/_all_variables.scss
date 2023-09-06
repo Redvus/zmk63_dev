@@ -7,7 +7,7 @@ $fourth   : #75788b !default;
 $five     : #fff;
 /* @end  */
 
-$border_2px: 2px solid $primary;
+$border_2px: 0.15rem solid $primary;
 
 $transorm1: 0s 0.35s;
 $transorm2: 0.35s 0s;
@@ -35,7 +35,7 @@ $XPortrait: (media: "(min-width: #{$pad_v}) and (max-width: #{$pad_g}) and (orie
 
 /*=====  End of Media  ======*/
 
-$headerHeight: 4rem;
+$headerHeight: 3.5rem;
 
 @mixin rowMachine($numPerRow, $margin) {
     width: calc((100% - ((#{$numPerRow} - 1) * #{$margin})) / #{$numPerRow});
@@ -159,7 +159,7 @@ $color-3: #000000; // Black
 $color-4: #c0a672; // Gimblet
 
 // fonts
-@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://use.fontawesome.com/releases/v5.10.0/css/all.css');
 
 @font-face {
   font-family: 'Uni Sans Thin CAPS';
@@ -267,6 +267,10 @@ body {
 			font-family: $font-family-header-bold !important;
 		}
 	}
+}
+
+h1,h2,h3,h4 {
+    font-family: $font-family-header-bold;
 }
 
 a {

@@ -343,7 +343,7 @@
 	/*============  End of Turn  =============*/
 
 	function initDesktop() {
-		fullPage();
+		// fullPage();
 		lastMagazine();
 	}
 
