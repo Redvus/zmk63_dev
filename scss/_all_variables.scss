@@ -36,6 +36,7 @@ $XPortrait: (media: "(min-width: #{$pad_v}) and (max-width: #{$pad_g}) and (orie
 /*=====  End of Media  ======*/
 
 $headerHeight: 3.5rem;
+$wrapperWidth: 60rem;
 
 @mixin rowMachine($numPerRow, $margin) {
     width: calc((100% - ((#{$numPerRow} - 1) * #{$margin})) / #{$numPerRow});

@@ -101,7 +101,7 @@
 
 			ul {
 				font-family: $font-family-base;
-				color: #fff;
+				color: $five;
 				margin-top: 5px;
 				animation-duration: 1s;
 				animation-delay: 0.7s;
@@ -137,20 +137,14 @@
 		}
 
 		h2, h3, p {
-			color: #fff;
+			color: $five;
 		}
 
-		@include grid-media($Small) {
+		@include grid-media($XSmall) {
 
 			.info-content {
 				display: block;
 				visibility: visible;
-			}
-
-			.franchise-block {
-				width: 100%;
-				padding: 0 1rem;
-				margin-top: 2rem;
 			}
 		}
 	}
@@ -223,30 +217,35 @@
 		}
 	}
 
-	@include grid-media($Small) {
+	@include grid-media($XSmall) {
 		padding: $headerHeight 0;
 
-		.post-preview {
-			margin-bottom: $headerHeight * 2;
-			flex-direction: column;
+		&-magazine,
+		&-clients {
+			display: none;
+			visibility: hidden;
+		}
 
-			&:first-child {
-				margin-top: 0;
-			}
+		&-franchise {
+			background-color: $five;
 
-			&:nth-child(3n) {
-				margin-bottom: $headerHeight;
-			}
-
-			&__image {
+			.franchise-block {
 				width: 100%;
-				margin-right: 0;
-				margin-bottom: $headerHeight / 2;
+				padding: 0 1rem;
+				margin-top: 2rem;
+
+				ul {
+					color: $third;
+				}
 			}
 
-			&__main {
-				width: 100%;
+			h2, h3, p {
+				color: $third;
 			}
+		}
+
+		&-news {
+			padding-top: calc(#{$headerHeight} * 1.5);
 		}
 
 		.news-content {
@@ -359,6 +358,29 @@
 			color: $five;
 		}
 	}
+
+	@include grid-media($XSmall) {
+		margin-bottom: 2rem;
+		flex-direction: column;
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		&:nth-child(3n) {
+			margin-bottom: $headerHeight;
+		}
+
+		&__image {
+			width: 100%;
+			margin-right: 0;
+			margin-bottom: $headerHeight / 2;
+		}
+
+		&__main {
+			width: 100%;
+		}
+	}
 }
 
 .news-content {
@@ -367,7 +389,7 @@
 	display: block;
 	padding-top: 2rem;
 	margin: 0 auto;
-	// text-align: center;
+	overflow: auto;
 
 	&__bottom {
 		width: 100%;
@@ -397,6 +419,13 @@
 		&:hover {
 			color: $secondary;
 			border-color: $secondary;
+		}
+	}
+
+	@include grid-media($XSmall) {
+
+		&__link {
+			margin-top: 0;
 		}
 	}
 }
@@ -541,6 +570,42 @@
 
 		p {
 			margin: 1rem 0;
+		}
+	}
+
+	&-gallery {
+		width: 100%;
+		min-height: 10rem;
+		//display: flex;
+		//flex-direction: row;
+		//flex-wrap: wrap;
+		display: block;
+		position: relative;
+		overflow: auto;
+
+		a {
+			//width: calc((#{$wrapperWidth} / 3));
+			@include rowMachine(3, 1rem);
+			height: calc(#{$wrapperWidth} / 3);
+			display: block;
+			float: left;
+			position: relative;
+
+			picture {
+				width: 100%;
+				height: 100%;
+				display: block;
+				position: relative;
+
+				img {
+					width: 100%;
+					height: 100%;
+					display: block;
+					position: relative;
+					object-position: center;
+					object-fit: cover;
+				}
+			}
 		}
 	}
 

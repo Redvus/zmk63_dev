@@ -498,12 +498,14 @@ footer {
 	width: 100%;
 	min-height: 100vh;
 	padding: 8rem 0;
+	overflow: auto;
 
 	&-content {
-		width: 60rem;
+		width: $wrapperWidth;
 		display: block;
 		position: relative;
 		margin: 0 auto;
+		overflow: auto;
 
 		&__breadcrumbs {
 			min-height: 1rem;
@@ -530,6 +532,36 @@ footer {
 				span {
 					font-family: $font-family-base;
 					color: $primary;
+				}
+			}
+		}
+
+		&__title {
+			min-width: 200px;
+			//height: 55px;
+			//background-color: $primary;
+			//background: url('images/header_title_back.svg') no-repeat;
+			display: block;
+			border-bottom: $border_2px;
+			padding: 10px;
+			transition: 0.5s;
+
+			h1 {
+				font: {
+					family: $font-family-header;
+					size: $font-size-h1;
+				};
+				text-align: center;
+				text-transform: uppercase;
+				color: $third;
+				animation-duration: 1.3s;
+				//visibility: hidden;
+
+				span {
+					font: {
+						family: $font-family-header-bold;
+						size: $font-size-h1;
+					};
 				}
 			}
 		}

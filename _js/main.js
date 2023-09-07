@@ -1,9 +1,5 @@
-; (function ($) {
+;(function($) {
 	'use strict';
-
-	$('.wrapper').imagesLoaded({
-        background: true
-	});
 
 	/*====================================================
 	=                   Fullpage 2.9.5                   =
