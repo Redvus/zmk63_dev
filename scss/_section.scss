@@ -359,6 +359,10 @@
 		}
 	}
 
+	&__video {
+		margin-bottom: 1rem;
+	}
+
 	@include grid-media($XSmall) {
 		margin-bottom: 2rem;
 		flex-direction: column;
@@ -419,6 +423,32 @@
 		&:hover {
 			color: $secondary;
 			border-color: $secondary;
+		}
+	}
+
+	&--gallery {
+		padding-top: 0;
+	}
+
+	&__gallery {
+		width: 100%;
+		display: block;
+		overflow: auto;
+		border-bottom: $border_2px;
+
+		picture {
+			width: 100%;
+			display: block;
+			position: relative;
+			overflow: auto;
+
+			img {
+				width: 100%;
+				height: 100%;
+				display: block;
+				object-position: center;
+				object-fit: cover;
+			}
 		}
 	}
 

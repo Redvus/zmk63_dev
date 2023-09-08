@@ -509,29 +509,34 @@ footer {
 
 		&__breadcrumbs {
 			min-height: 1rem;
-			margin-bottom: 2rem;
+			//margin-bottom: 2rem;
+			padding: 0.5rem 0;
+			text-align: center;
 
-			li {
-				height: 1rem;
-				display: inline-block;
+			ul {
 
-				a {
-					font-family: $font-family-base;
+				li {
+					height: 1rem;
+					display: inline-block;
 
-					span {
-						color: $fourth;
-					}
+					a {
+						font-family: $font-family-base;
 
-					&:hover {
 						span {
-							color: $primary;
+							color: $fourth;
+						}
+
+						&:hover {
+							span {
+								color: $primary;
+							}
 						}
 					}
-				}
 
-				span {
-					font-family: $font-family-base;
-					color: $primary;
+					span {
+						font-family: $font-family-base;
+						color: $primary;
+					}
 				}
 			}
 		}
