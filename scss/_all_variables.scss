@@ -5,12 +5,13 @@ $secondary: #a74a83 !default;
 $third    : #596176 !default;
 $fourth   : #75788b !default;
 $five     : #fff;
+$six      : #1c265d;
 /* @end  */
 
 $border_2px: 0.15rem solid $primary;
 
-$transorm1: 0s 0.35s;
-$transorm2: 0.35s 0s;
+$transform1: 0s 0.35s;
+$transform2: 0.35s 0s;
 
 /*=============================
 =            Media            =
@@ -160,7 +161,8 @@ $color-3: #000000; // Black
 $color-4: #c0a672; // Gimblet
 
 // fonts
-@import url('https://use.fontawesome.com/releases/v5.10.0/css/all.css');
+//@import url('https://use.fontawesome.com/releases/v5.10.0/css/all.css');
+//@import url('https://stackpath.bootstrapcdn.com/font-awesome/6.1.0/css/font-awesome.min.css');
 
 @font-face {
   font-family: 'Uni Sans Thin CAPS';

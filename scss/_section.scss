@@ -433,6 +433,7 @@
 	&__gallery {
 		width: 100%;
 		display: block;
+		position: relative;
 		overflow: auto;
 		border-bottom: $border_2px;
 
@@ -448,6 +449,34 @@
 				display: block;
 				object-position: center;
 				object-fit: cover;
+			}
+		}
+
+		&:after {
+			content:"\f061";
+			font-family: 'fontawesome';
+			font-size: $font-size-h2;
+			position: absolute;
+			display: block;
+			top: 50%;
+			right: 0;
+			color: $six;
+			transform: translate(-10%, -50%);
+			transition: all 0.3s;
+			user-select: none;
+		}
+
+		&:hover {
+
+			picture {
+
+				img {
+					opacity: 1;
+				}
+			}
+
+			&:after {
+				transform: translate(0, -50%);
 			}
 		}
 	}
