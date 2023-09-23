@@ -12,21 +12,112 @@
 		z-index: 9000;
 		transition: 0.5s;
 		//visibility: hidden;
+
+		&--mobile {
+			display: none;
+			visibility: hidden;
+		}
+
+		&--desktop {
+			display: block;
+			visibility: visible;
+		}
+
+		&__logo {
+			width: 35%;
+			height: calc(100% - 10px);
+			display: block;
+			float: left;
+			position: relative;
+			margin-top: 10px;
+			transition: 0.5s;
+			text-align: center;
+
+			img {
+				width: auto;
+				height: 35px;
+				max-height: 35px;
+			}
+		}
 	}
 
-	&-logo {
-		width: 35%;
-		height: calc(100% - 10px);
-		display: block;
-		float: left;
-		margin-top: 10px;
-		transition: 0.5s;
-		text-align: center;
+	&-mobile {
 
-		img {
-			width: auto;
-			height: 35px;
-			max-height: 35px;
+		&__nav {
+			width: calc(85% - (#{$padding} * 2));
+			height: calc(100vh - (#{$headerMobileTopHeight} * 2));
+			position: fixed;
+			top: $headerMobileTopHeight;
+			right: 0;
+			background-color: $five;
+			padding: $padding;
+			//border-left: $border-normal solid $primary;
+			z-index: -1;
+			display: none;
+			visibility: hidden;
+			transform: translateX(100%);
+
+			ul {
+				list-style: none;
+
+				li {
+					padding: calc(#{$padding} / 3) 0;
+
+					a {
+						font-family: $font-family-header-bold;
+						text-transform: uppercase;
+						color: $third;
+					}
+				}
+			}
+
+			&_mask {
+				width: 100%;
+				height: calc(100vh - (#{$headerMobileTopHeight} * 2));
+				position: fixed;
+				top: $headerMobileTopHeight;
+				left: 0;
+				background-color: rgba($primary, 0.8);
+				z-index: -1;
+				opacity: 0;
+				visibility: hidden;
+			}
+
+			&_button {
+				width: calc(50% / 3);
+				height: $headerMobileTopHeight;
+				display: none;
+				visibility: hidden;
+				align-items: center;
+				justify-content: center;
+				position: fixed;
+				top: 0;
+				right: 0;
+				cursor: pointer;
+				z-index: 9998;
+			}
+
+			&_line {
+				width: calc(#{$headerMobileTopHeight} / 2);
+				height: $border_thin + 0.05;
+				background-color: $primary;
+				position: absolute;
+				// transition: transform 0.3s;
+
+				&__top {
+					transform: translate(0, -290%);
+					transform-origin: 50% 50%;
+				}
+
+				&__middle {
+					transform-origin: 50% 50%;
+				}
+
+				&__bottom {
+					transform: translate(0, 290%);
+					transform-origin: 50% 50%;
+				}
+			}
 		}
 	}
 
@@ -264,24 +355,56 @@
 		}
 	}
 
-	@include grid-media($Small) {
+	@include grid-media($XSmall) {
 		height: $headerHeight;
 
-		&-logo {
-			width: 100%;
-			height: 100%;
-			margin-top: 0;
+		&-top {
 
-			img {
-				width: auto;
-				height: 100%;
+			&--mobile {
 				display: block;
-				object-fit: cover;
-				object-position: center;
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
+				visibility: visible;
+			}
+
+			//&--desktop {
+			//	display: none;
+			//	visibility: hidden;
+			//}
+
+			&__logo {
+				//width: calc(100% - #{$headerHeight});
+				width: 100%;
+				height: 100%;
+				margin-top: 0;
+
+				img {
+					width: auto;
+					height: 50%;
+					display: block;
+					object-fit: cover;
+					object-position: center;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+				}
+			}
+		}
+
+		&-mobile {
+
+			&__nav {
+				display: block;
+				visibility: visible;
+
+				&_button {
+					display: flex;
+					visibility: visible;
+				}
+
+				&_mask {
+					display: block;
+					visibility: visible;
+				}
 			}
 		}
 
@@ -500,12 +623,18 @@ footer {
 	padding: 8rem 0;
 	overflow: auto;
 
+	&--white {
+		background-color: $five;
+	}
+
 	&-content {
 		width: $wrapperWidth;
 		display: block;
 		position: relative;
 		margin: 0 auto;
 		overflow: auto;
+
+
 
 		&__breadcrumbs {
 			min-height: 1rem;
@@ -572,7 +701,7 @@ footer {
 		}
 	}
 
-	@include grid-media($Small) {
+	@include grid-media($XSmall) {
 		padding: ($headerHeight + 1) 0;
 
 		&-content {
@@ -581,6 +710,17 @@ footer {
 
 			&__breadcrumbs {
 				padding-left: 0;
+
+				ul {
+					padding-left: 0;
+
+					li {
+
+						a, span {
+							font-size: $font-size-small;
+						}
+					}
+				}
 			}
 		}
 	}

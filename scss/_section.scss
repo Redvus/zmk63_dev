@@ -482,6 +482,7 @@
 	}
 
 	@include grid-media($XSmall) {
+		width: 100%;
 
 		&__link {
 			margin-top: 0;
@@ -668,7 +669,7 @@
 		}
 	}
 
-	@include grid-media($Small) {
+	@include grid-media($XSmall) {
 
 		&-inside {
 
@@ -683,6 +684,14 @@
 				width: $headerHeight * 2.5;
 				height: $headerHeight * 2.5;
 				float: none;
+			}
+		}
+
+		&-gallery {
+
+			a {
+				@include rowMachine(2, 0.5rem);
+				height: calc((100vw - 2rem) / 2);
 			}
 		}
 	}

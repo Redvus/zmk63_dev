@@ -39,6 +39,13 @@ $XPortrait: (media: "(min-width: #{$pad_v}) and (max-width: #{$pad_g}) and (orie
 $headerHeight: 3.5rem;
 $wrapperWidth: 60rem;
 
+$headerMobileTopHeight: 3.5rem;
+$padding: 1rem;
+
+$border_thin: 0.1rem;
+$border_normal: 0.3rem;
+$border_bold: 0.6rem;
+
 @mixin rowMachine($numPerRow, $margin) {
     width: calc((100% - ((#{$numPerRow} - 1) * #{$margin})) / #{$numPerRow});
     // width: calc((100% - ((#{$numPerRow} / #{$numPerRow}) * #{$margin})) / #{$numPerRow}); //решение для fenom
@@ -162,31 +169,51 @@ $color-4: #c0a672; // Gimblet
 
 // fonts
 //@import url('https://use.fontawesome.com/releases/v5.10.0/css/all.css');
-//@import url('https://stackpath.bootstrapcdn.com/font-awesome/6.1.0/css/font-awesome.min.css');
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
 @font-face {
-  font-family: 'Uni Sans Thin CAPS';
-  src: url('fonts/Uni_Sans_Thin.eot'); /* IE9 Compat Modes */
-  src: url('fonts/Uni_Sans_Thin.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-      url('fonts/Uni_Sans_Thin.woff') format('woff'), /* Modern Browsers */
-      url('fonts/Uni_Sans_Thin.ttf')  format('truetype'), /* Safari, Android, iOS */
-      url('fonts/Uni_Sans_Thin.svg#1bd43dde46dc066a93356782823de17e') format('svg'); /* Legacy iOS */
-
-  font-style:   normal;
-  font-weight:  200;
+    font-family: "Uni Sans Thin CAPS";
+    src: local("fonts/Roboto-Black-export/"),
+    //url("fonts/Uni_Sans_Thin.woff") format("woff2"),
+    url("fonts/Uni_Sans_Thin.woff") format("woff");
+    font-style: normal;
+    font-weight: 200;
+    font-display: swap;
 }
 
 @font-face {
-  font-family: 'Uni Sans Heavy CAPS';
-  src: url('fonts/Uni_Sans_Heavy.eot'); /* IE9 Compat Modes */
-  src: url('fonts/Uni_Sans_Heavy.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-      url('fonts/Uni_Sans_Heavy.woff') format('woff'), /* Modern Browsers */
-      url('fonts/Uni_Sans_Heavy.ttf')  format('truetype'), /* Safari, Android, iOS */
-      url('fonts/Uni_Sans_Heavy.svg#baac65bb1c1f97c88c153c7365f11a3e') format('svg'); /* Legacy iOS */
-
-  font-style:   normal;
-  font-weight:  400;
+    font-family: "Uni Sans Heavy CAPS";
+    src: local("fonts/Roboto-Black-export/"),
+        //url("fonts/Uni_Sans_Thin.woff") format("woff2"),
+    url("fonts/Uni_Sans_Heavy.woff") format("woff");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
 }
+
+//@font-face {
+//  font-family: 'Uni Sans Thin CAPS';
+//  src: url('fonts/Uni_Sans_Thin.eot'); /* IE9 Compat Modes */
+//  src: url('fonts/Uni_Sans_Thin.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+//      url('fonts/Uni_Sans_Thin.woff') format('woff'), /* Modern Browsers */
+//      url('fonts/Uni_Sans_Thin.ttf')  format('truetype'), /* Safari, Android, iOS */
+//      url('fonts/Uni_Sans_Thin.svg#1bd43dde46dc066a93356782823de17e') format('svg'); /* Legacy iOS */
+//
+//  font-style:   normal;
+//  font-weight:  200;
+//}
+
+//@font-face {
+//  font-family: 'Uni Sans Heavy CAPS';
+//  src: url('fonts/Uni_Sans_Heavy.eot'); /* IE9 Compat Modes */
+//  src: url('fonts/Uni_Sans_Heavy.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+//      url('fonts/Uni_Sans_Heavy.woff') format('woff'), /* Modern Browsers */
+//      url('fonts/Uni_Sans_Heavy.ttf')  format('truetype'), /* Safari, Android, iOS */
+//      url('fonts/Uni_Sans_Heavy.svg#baac65bb1c1f97c88c153c7365f11a3e') format('svg'); /* Legacy iOS */
+//
+//  font-style:   normal;
+//  font-weight:  400;
+//}
 
 $primary-font: 'Sintony', sans-serif;
 
