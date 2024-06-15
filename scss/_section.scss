@@ -177,11 +177,25 @@
 		}
 
 		.left-text {
-			width: 50%;
+			width: 100%;
 			display: block;
 			float: left;
 			position: relative;
 			margin-top: 30px;
+			text-align: center;
+
+			h3 {
+				font: {
+					family: $font-family-header;
+					size: $font-size-h4;
+				};
+				color: $secondary;
+				//margin-top: 3rem;
+			}
+
+			p {
+				text-align: center;
+			}
 		}
 
 		.form-contact {
