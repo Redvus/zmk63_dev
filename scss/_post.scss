@@ -1,0 +1,266 @@
+.post {
+
+	&__image {
+		width: 100%;
+		height: 40vh;
+		display: block;
+
+		img {
+			width: 100%;
+			height: 100%;
+			display: block;
+			object-fit: cover;
+			object-position: center;
+		}
+	}
+
+	&__top {
+		border-bottom: 0.15rem solid $primary;
+
+		h1 {
+			font-family: $font-family-header;
+			font-size: $font-size-h1;
+			color: $secondary;
+			margin: 2rem 0 1.2rem;
+		}
+
+		h3 {
+			font-family: $font-family-header-bold;
+			font-size: $font-size-h4;
+			color: $primary;
+			margin: 2rem 0 1.2rem;
+		}
+	}
+
+	&__middle {
+
+		p {
+
+			b {
+				font: {
+					family: $font-family-header-bold;
+					size: $font-size-base;
+				};
+				color: $primary;
+				margin-bottom: 0.5rem;
+			}
+		}
+
+		h4 {
+			font: {
+				family: $font-family-header;
+				size: $font-size-h4;
+			};
+			color: $secondary;
+			margin-top: 3rem;
+		}
+	}
+
+	&__bottom {
+
+
+		.ticket-meta {
+			font-family: $font-family-base;
+			border-top: 0.15rem solid $primary;
+			border-bottom: 0.15rem solid $primary;
+		}
+	}
+
+	&-comment {
+		padding-top: 2rem;
+
+		&__title {
+			font: {
+				family: $font-family-header;
+				size: $font-size-h4;
+			};
+			color: $primary;
+			margin-bottom: 1rem;
+		}
+	}
+
+	&-inside {
+
+		&__description {
+			width: 100%;
+			min-height: 7rem;
+			display: inline-block;
+			margin: 2rem 0 1rem;
+			padding: 0 0 0 1rem;
+			// display: flex;
+			// flex-direction: row;
+			border-left: 1rem solid $primary;
+
+			&-content {
+				// display: inline-block;
+
+				h4 {
+					font-family: $font-family-header-bold;
+					font-size: $font-size-h5;
+					color: $primary;
+					margin-top: 0;
+				}
+
+				> p {
+					margin: 1rem 0 0 !important;
+				}
+
+				> ul {
+					list-style: disc !important;
+					padding-left: $font-size-base !important;
+					margin-top: 1rem;
+				}
+			}
+		}
+
+		&__image {
+			width: 7rem;
+			height: 7rem;
+			// display: inline-block;
+			float: left;
+			margin-right: 1rem;
+			overflow: hidden;
+
+			img {
+				width: 100%;
+				height: 100%;
+				display: block;
+				object-fit: cover;
+				object-position: center;
+			}
+
+			p {
+				display: inline-block;
+			}
+		}
+	}
+
+	&__main {
+
+		p {
+			margin: 1rem 0;
+		}
+	}
+
+	&-gallery {
+		width: 100%;
+		min-height: 10rem;
+		//display: flex;
+		//flex-direction: row;
+		//flex-wrap: wrap;
+		display: block;
+		position: relative;
+		overflow: auto;
+
+		a {
+			//width: calc((#{$wrapperWidth} / 3));
+			@include rowMachine(3, 1rem);
+			height: calc(#{$wrapperWidth} / 3);
+			display: block;
+			float: left;
+			position: relative;
+
+			picture {
+				width: 100%;
+				height: 100%;
+				display: block;
+				position: relative;
+
+				img {
+					width: 100%;
+					height: 100%;
+					display: block;
+					position: relative;
+					object-position: top;
+					object-fit: cover;
+				}
+			}
+		}
+	}
+
+	&-links {
+		width: 100%;
+		min-height: 10rem;
+		//display: flex;
+		//flex-direction: row;
+		//flex-wrap: wrap;
+		display: block;
+		position: relative;
+		overflow: auto;
+
+		&__link {
+			width: 100%;
+			height: auto;
+			display: block;
+			float: left;
+			position: relative;
+
+			picture {
+				width: 100%;
+				height: 100%;
+				display: block;
+				position: relative;
+
+				img {
+					width: 100%;
+					height: 100%;
+					display: block;
+					position: relative;
+					object-position: top;
+					object-fit: cover;
+				}
+			}
+
+			&:after {
+				content:"\f061";
+				font-family: 'fontawesome';
+				font-size: $font-size-h2;
+				position: absolute;
+				display: block;
+				top: 50%;
+				left: 50%;
+				color: $six;
+				transform: translate(-50%, -50%);
+				transition: all 0.3s;
+				user-select: none;
+				z-index: 2;
+				opacity: 0;
+			}
+
+			&:hover {
+
+				&:after {
+					opacity: 1;
+					transform: translate(-30%, -50%);
+				}
+			}
+		}
+	}
+
+	@include grid-media($XSmall) {
+
+		&-inside {
+
+			&__description {
+
+				&-content {
+					margin-top: $headerHeight / 2;
+				}
+			}
+
+			&__image {
+				width: $headerHeight * 2.5;
+				height: $headerHeight * 2.5;
+				float: none;
+			}
+		}
+
+		&-gallery {
+
+			a {
+				@include rowMachine(2, 0.5rem);
+				height: calc((100vw - 2rem) / 2);
+			}
+		}
+	}
+}
