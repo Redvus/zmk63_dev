@@ -263,5 +263,12 @@
 				height: calc((100vw - 2rem) / 2);
 			}
 		}
+
+		&-links {
+
+			&__link {
+				margin-bottom: 1rem;
+			}
+		}
 	}
 }

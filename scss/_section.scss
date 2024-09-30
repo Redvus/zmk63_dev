@@ -508,13 +508,29 @@
 			position: absolute;
 			display: block;
 			top: 50%;
-			right: 1rem;
+			right: 0;
 			color: $six;
-			transform: translate(-50%, -50%);
+			transform: translate(-10%, -50%);
 			transition: all 0.3s;
 			user-select: none;
 			z-index: 2;
 			// opacity: 0;
+		}
+
+		picture {
+			width: 100%;
+			display: block;
+			position: relative;
+			overflow: auto;
+
+			img {
+				width: 100%;
+				height: 100%;
+				display: block;
+				position: relative;
+				object-position: center;
+				object-fit: cover;
+			}
 		}
 
 		&:hover {
@@ -528,16 +544,24 @@
 
 			&:after {
 				// opacity: 1;
-				transform: translate(-30%, -50%);
+				transform: translate(0, -50%);
 			}
 		}
 	}
 
 	@include grid-media($XSmall) {
 		width: 100%;
+		padding-top: 1rem;
 
 		&__link {
 			margin-top: 0;
+		}
+
+		&__banner {
+
+			&:after {
+				transform: translate(0, -50%);
+			}
 		}
 	}
 }
